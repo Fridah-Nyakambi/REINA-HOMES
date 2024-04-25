@@ -6,7 +6,6 @@
 header {
   height: fit-content;
   width: 85vw;
-  /* padding: 70px; */
   background-color: #545e6c;
   color: white;
   display: flex;
@@ -426,8 +425,10 @@ header .header-btn:hover {
     rgb(38, 36, 34),
     rgb(40, 30, 1)
   );
-  padding-top: 20px;
+  padding: 20px;
   color: gray;
+  height: 150px;
+  width: 300px;
 }
 /* <!-- FOOTER --> */
 footer {
