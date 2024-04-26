@@ -75,7 +75,7 @@ header .header-btn:hover,
   transform: translateY(-1.75rem);
   transition: transform 250ms;
 }
-@media (max-width: 950px) {
+/* @media (max-width: 950px) {
   header .nav {
     display: grid;
     place-items: center;
@@ -83,7 +83,7 @@ header .header-btn:hover,
     padding-block: 7rem;
     margin-block-end: 3rem;
   }
-}
+} */
 
 /* HERO  */
 .hero {
@@ -98,14 +98,6 @@ header .header-btn:hover,
   object-fit: contain;
   background-position: center;
   background-size: cover;
-  /* animation: fade-out linear;
-  animation-timeline: view();
-  animation-range: entry -100px;
-}
-@keyframes fade-out {
-  to {
-    opacity: 0;
-  } */
 }
 .hero::before {
   content: "";
@@ -123,6 +115,7 @@ header .header-btn:hover,
   top: 35vh;
   left: 30vw;
 }
+
 .hero .hero-content h1 {
   font-size: 50px;
   letter-spacing: 2px;
@@ -319,23 +312,13 @@ header .header-btn:hover,
   align-items: center;
   justify-content: space-evenly;
 }
-.properties .houses {
-  animation: scrolling linear;
-  animation-timeline: scroll(root);
-  animation-direction: reverse;
-}
-@keyframes scrolling {
-  to {
-    transform: translate(calc(-50% -0.5rem));
-  }
-}
+
 .properties .houses .polaroid {
   width: fit-content;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
   text-align: center;
-  /* padding: 10px 20px; */
 }
 .properties .img {
   height: 40vh;
@@ -668,4 +651,26 @@ footer .i {
   color: white;
   border-radius: 25px;
   text-transform: capitalize;
+}
+@media (max-width: 950px) {
+  header {
+    height: auto;
+  }
+
+  .hero {
+    display: none;
+  }
+  h1 {
+    font-size: 20px;
+  }
+
+  header .nav,
+  .about .about-info,
+  .properties .houses,
+  .agents .people,
+  footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
 }
