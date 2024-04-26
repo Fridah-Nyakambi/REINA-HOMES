@@ -305,6 +305,17 @@ header .header-btn:hover,
   padding-left: 40px;
   margin-bottom: 50px;
 }
+.properties p {
+  text-align: end;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.properties .pagination {
+  font-size: x-large;
+  color: rgb(244, 154, 10);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 .properties .houses {
   margin-left: 50px;
   display: flex;
