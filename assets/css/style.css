@@ -62,18 +62,33 @@ header .header-btn {
   font-family: arial;
   border-radius: 25px;
   text-transform: capitalize;
+  cursor: pointer;
+  transition: transform 250ms;
 }
 a:link {
   text-decoration: none;
 }
-header .header-btn:hover {
+header .header-btn:hover,
+.header-btn:focus-visible {
   background-color: rgb(40, 30, 1);
   color: white;
+  transform: translateY(-1.75rem);
+  transition: transform 250ms;
 }
+@media (max-width: 950px) {
+  header .nav {
+    display: grid;
+    place-items: center;
+    overflow-x: clip;
+    padding-block: 7rem;
+    margin-block-end: 3rem;
+  }
+}
+
 /* HERO  */
 .hero {
   position: relative;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   color: rgb(242, 237, 240);
   font-family: sans-serif;
@@ -83,6 +98,14 @@ header .header-btn:hover {
   object-fit: contain;
   background-position: center;
   background-size: cover;
+  /* animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: entry -100px;
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  } */
 }
 .hero::before {
   content: "";
@@ -97,10 +120,9 @@ header .header-btn:hover {
 .hero .hero-content {
   z-index: 1999;
   position: absolute;
-  top: 45vh;
+  top: 35vh;
   left: 30vw;
 }
-
 .hero .hero-content h1 {
   font-size: 50px;
   letter-spacing: 2px;
@@ -132,18 +154,72 @@ header .header-btn:hover {
   align-items: center;
   padding-left: 30px;
   font-size: 18px;
+  cursor: pointer;
+  transition: transform 250ms;
 }
 .hero-btn a {
   text-decoration: none;
 }
-.hero .hero-content .hero-btn:hover {
+.hero .hero-content .hero-btn:hover,
+.hero-btn:focus-visible {
   background-color: rgb(40, 30, 1);
   color: white;
+  transform: translateY(-1.75rem);
+  transition: transform 250ms;
 }
-
+/* ABOUT */
+.about {
+  height: auto;
+  width: 100%;
+  font-family: arial;
+  margin-bottom: 50px;
+}
+.about h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: capitalize;
+  padding-top: 40px;
+  margin-bottom: 50px;
+}
+.about .about-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .about-info .mask {
+  width: 40%;
+}
+.about .about-info .mask h1 {
+  width: 70%;
+  margin-left: 100px;
+  font-size: 6vw;
+  background-image: url(../images/about.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about .about-info .explaination {
+  width: 50%;
+}
+.about .about-info .explaination h2 {
+  width: 60%;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  line-height: 01cm;
+  font-weight: 100;
+}
+.about .about-info .explaination p {
+  width: 50%;
+  font-size: 15px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 0.8cm;
+  margin-bottom: 30px;
+}
 /* SERVICES */
 .services {
-  height: 100vh;
+  height: auto;
   width: 100%;
   background: linear-gradient(
     45deg,
@@ -177,6 +253,16 @@ header .header-btn:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+}
+@media (max-width: 950px) {
+  .services .container .boxes {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    overflow-x: clip;
+    padding-block: 7rem;
+    margin-block-end: 3rem;
+  }
 }
 .services .container .boxes .wwo {
   display: flex;
@@ -233,6 +319,24 @@ header .header-btn:hover {
   align-items: center;
   justify-content: space-evenly;
 }
+.properties .houses {
+  animation: scrolling linear;
+  animation-timeline: scroll(root);
+  animation-direction: reverse;
+}
+@keyframes scrolling {
+  to {
+    transform: translate(calc(-50% -0.5rem));
+  }
+}
+.properties .houses .polaroid {
+  width: fit-content;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  text-align: center;
+  /* padding: 10px 20px; */
+}
 .properties .img {
   height: 40vh;
   width: 30vw;
@@ -288,7 +392,7 @@ header .header-btn:hover {
   font-weight: 100;
   letter-spacing: 1px;
   line-height: 1cm;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .agents .people {
   display: flex;
@@ -299,6 +403,7 @@ header .header-btn:hover {
 .agents .people .img {
   height: 50vh;
   width: 25vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .agents .people h5 {
   color: rgb(103, 98, 90);
@@ -306,6 +411,7 @@ header .header-btn:hover {
   font-weight: 700;
   text-transform: capitalize;
   font-family: arial;
+  margin-top: 20px;
 }
 .agents .people p {
   font-size: 18px;
@@ -367,7 +473,6 @@ header .header-btn:hover {
 .contact {
   height: auto;
   width: 100%;
-  margin-left: 70px;
 }
 
 .contact h1 {
@@ -376,11 +481,15 @@ header .header-btn:hover {
   font-family: system-ui;
   letter-spacing: 4px;
   line-height: 1.5cm;
-  margin-top: 30px;
+  margin-top: 50px;
+  text-align: center;
 }
 .contact .form {
   display: flex;
+  width: 80%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
 }
 .contact .form label {
@@ -395,7 +504,7 @@ header .header-btn:hover {
 }
 .contact .form .input {
   height: 50px;
-  width: 330px;
+  width: 40vw;
   border-radius: 20px;
   border: none;
   background: linear-gradient(
@@ -411,8 +520,34 @@ header .header-btn:hover {
     rgb(40, 30, 1)
   );
   padding-left: 20px;
+  animation: mymove 3s;
+  animation-fill-mode: forwards;
+  position: relative;
 }
-.contact .form #message {
+.contact .form #input1 {
+  animation-timing-function: linear;
+}
+.contact .form #input2 {
+  animation-timing-function: ease;
+}
+.contact .form #input3 {
+  animation-timing-function: ease-in;
+}
+.contact .form #input4 {
+  animation-timing-function: ease-in-out;
+}
+.contact .form #input5 {
+  animation-timing-function: ease-out;
+}
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 200px;
+  }
+}
+.contact .form .message {
   border-radius: 20px;
   border: none;
   background: linear-gradient(
@@ -429,8 +564,11 @@ header .header-btn:hover {
   );
   padding: 20px;
   color: gray;
-  height: 150px;
-  width: 300px;
+  height: 100px;
+  width: 40vw;
+  animation: mymove 3s;
+  animation-fill-mode: forwards;
+  position: relative;
 }
 /* <!-- FOOTER --> */
 footer {
