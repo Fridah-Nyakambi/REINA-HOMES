@@ -666,6 +666,7 @@ footer .i {
 @media (max-width: 950px) {
   header {
     height: auto;
+    position: static;
   }
 
   .hero {
