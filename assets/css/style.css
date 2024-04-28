@@ -675,6 +675,10 @@ footer .i {
   h1 {
     font-size: 20px;
   }
+  .services .wwo,
+  button {
+    margin-bottom: 40px;
+  }
 
   header .nav,
   .about .about-info,
