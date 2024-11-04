@@ -248,9 +248,12 @@ header .header-btn:hover,
   }
 }
 
-@media (max-width: 540px) {
+@media (min-width: 400px) {
   .services .container .boxes .wwo button {
     margin-bottom: 50px;
+  }
+  .services .container .boxes .wwo p {
+    width: 80%;
   }
 }
 .services .container .wwo {
@@ -674,10 +677,6 @@ footer .i {
   h1 {
     font-size: 20px;
   }
-  .services .wwo,
-  button {
-    /* margin-bottom: 40px; */
-  }
 
   header .nav,
   .about .about-info,
@@ -687,5 +686,18 @@ footer .i {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+  }
+  p {
+    width: 90%;
+  }
+}
+@media (min-width: 400px) {
+  .about .about-info .explaination p {
+    width: 90%;
+  }
+}
+@media (min-width: 780px) {
+  .about .about-info .explaination p {
+    width: 90%;
   }
 }
