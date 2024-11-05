@@ -6,7 +6,7 @@
 header {
   height: fit-content;
   width: 85vw;
-  background-color: #545e6c;
+  /* background-color: #545e6c; */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -707,7 +707,6 @@ footer .i {
 @media (max-width: 950px) {
   header {
     height: auto;
-    /* position: static; */
   }
 
   h1 {
