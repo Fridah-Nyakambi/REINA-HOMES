@@ -29,6 +29,7 @@ header .logo {
   background-position: center;
   background-size: cover;
 }
+
 header h1 {
   font-size: 22px;
 }
@@ -84,7 +85,7 @@ header .header-btn:hover,
   color: rgb(242, 237, 240);
   font-family: sans-serif;
   background-image: url(../images/hero-img.jpg);
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: contain;
   background-position: center;
@@ -187,7 +188,7 @@ header .header-btn:hover,
   width: 50%;
 }
 .about .about-info .explaination h2 {
-  width: 60%;
+  width: 70%;
   margin-bottom: 20px;
   letter-spacing: 1px;
   line-height: 01cm;
@@ -324,6 +325,7 @@ header .header-btn:hover,
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  gap: 5px;
 }
 
 .properties .houses .polaroid {
@@ -333,10 +335,34 @@ header .header-btn:hover,
   margin-bottom: 25px;
   text-align: center;
 }
-.properties .img {
-  height: 40vh;
+.properties .house-img {
+  height: 30vh;
   width: 30vw;
+  object-fit: contain;
+  background-position: center;
+  background-size: cover;
   margin-top: 30px;
+}
+.properties .houses .property6 {
+  background-image: url(../images/property6.jpg);
+}
+.properties .houses .property1 {
+  background-image: url(../images/property1.jpg);
+}
+.properties .houses .property2 {
+  background-image: url(../images/property2.jpg);
+}
+.properties .houses .property3 {
+  background-image: url(../images/property3.jpg);
+}
+.properties .houses .property4 {
+  background-image: url(../images/property4.jpg);
+}
+.properties .houses .property5 {
+  background-image: url(../images/property5.jpg);
+}
+.properties .houses .property7 {
+  background-image: url(../images/property7.jpg);
 }
 .properties p {
   font-size: 18px;
@@ -396,10 +422,23 @@ header .header-btn:hover,
   justify-content: space-evenly;
   align-items: center;
 }
-.agents .people .img {
-  height: 50vh;
+.agents .people .agent-img {
+  height: 40vh;
   width: 25vw;
+  object-fit: contain;
+  background-position: center;
+  background-size: cover;
+  margin-top: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.agents .people .agent1 {
+  background-image: url(../images/agent1.jpg);
+}
+.agents .people .agent2 {
+  background-image: url(../images/agent2.jpg);
+}
+.agents .people .agent3 {
+  background-image: url(../images/agent3.jpg);
 }
 .agents .people h5 {
   color: rgb(103, 98, 90);
@@ -668,20 +707,15 @@ footer .i {
 @media (max-width: 950px) {
   header {
     height: auto;
-    position: static;
+    /* position: static; */
   }
 
-  .hero {
-    display: none;
-  }
   h1 {
     font-size: 20px;
   }
 
   header .nav,
   .about .about-info,
-  .properties .houses,
-  .agents .people,
   footer {
     display: flex;
     flex-direction: column;
